@@ -15,6 +15,8 @@ public final class ModItems {
 	public static final Item SIGIL_FRAGMENT = register("sigil_fragment", Item::new, new Item.Properties());
 	public static final Item CORRUPTED_CORE = register("corrupted_core",
 			properties -> new BlockItem(ModBlocks.CORRUPTED_CORE, properties), new Item.Properties());
+	public static final Item CORRUPTION_FLOWER = register("corruption_flower",
+			properties -> new BlockItem(ModBlocks.CORRUPTION_FLOWER, properties), new Item.Properties());
 
 	private ModItems() {
 	}

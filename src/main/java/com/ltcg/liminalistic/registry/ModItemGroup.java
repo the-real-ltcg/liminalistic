@@ -17,6 +17,7 @@ public final class ModItemGroup {
 		CreativeModeTabEvents.modifyOutputEvent(INGREDIENTS).register(output -> {
 			output.accept(ModItems.SIGIL_FRAGMENT);
 			output.accept(ModItems.CORRUPTED_CORE);
+			output.accept(ModItems.CORRUPTION_FLOWER);
 		});
 	}
 }

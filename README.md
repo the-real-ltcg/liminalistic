@@ -21,6 +21,9 @@ Built for **Minecraft 26.2**.
   reshapes the corridor as it climbs.
 - **A way out** — at maximum corruption, find the Source Room and bring it Sigil Fragments to
   collapse the corridor and seal the doors.
+- **Sigil Fragments** are found in rare loot chests in Distorted Structure rooms, and can be
+  crafted (Sigil Fragment on top of a Stick) into a **Corruption Flower** — a decorative plant
+  that drifts more black ash particles the further your world's corruption has progressed.
 
 ## Requirements
 
@@ -33,8 +36,8 @@ Grab the jar from [Releases](https://github.com/the-real-ltcg/liminalistic/relea
 
 ## Note on assets
 
-This is a first pass — the mod's blocks/items/effect ship with plain placeholder textures for
-now. Everything else (rooms, doors, the entity, books) is built entirely from vanilla
+Most custom textures are in place; the Corruption Flower still ships with a placeholder texture
+for now. Everything else (rooms, doors, the entity, books) is built entirely from vanilla
 blocks/mobs/sounds/particles.
 
 ## License

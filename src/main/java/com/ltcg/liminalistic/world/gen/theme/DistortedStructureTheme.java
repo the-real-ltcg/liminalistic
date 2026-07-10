@@ -1,13 +1,23 @@
 package com.ltcg.liminalistic.world.gen.theme;
 
+import com.ltcg.liminalistic.LiminalisticMod;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.storage.loot.LootTable;
 
 public class DistortedStructureTheme implements RoomTheme {
+	private static final ResourceKey<LootTable> LOOT_TABLE = ResourceKey.create(Registries.LOOT_TABLE,
+			Identifier.fromNamespaceAndPath(LiminalisticMod.MOD_ID, "chests/distorted_structure"));
+	private static final int CHEST_CHANCE = 5;
+
 	private static final BlockState[] FLOOR_VARIANTS = {
 			Blocks.COBBLESTONE.defaultBlockState(),
 			Blocks.MOSSY_COBBLESTONE.defaultBlockState(),
@@ -55,6 +65,14 @@ public class DistortedStructureTheme implements RoomTheme {
 		int lightX = originX + 4 + random.nextInt(8);
 		int lightZ = originZ + 4 + random.nextInt(8);
 		level.setBlock(pos.set(lightX, floorY + roomHeight, lightZ), LIGHT, 2);
+
+		if (random.nextInt(CHEST_CHANCE) == 0) {
+			BlockPos chestPos = pos.set(originX + 3, floorY + 1, originZ + 3).immutable();
+			level.setBlock(chestPos, Blocks.CHEST.defaultBlockState(), 2);
+			if (level.getBlockEntity(chestPos) instanceof RandomizableContainerBlockEntity container) {
+				container.setLootTable(LOOT_TABLE);
+			}
+		}
 	}
 
 	private static BlockState randomOf(BlockState[] states, RandomSource random) {
