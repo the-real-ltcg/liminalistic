@@ -1,0 +1,6 @@
+{
+  "type": "liminalistic:infinite_corridor",
+  "generator": {
+    "type": "liminalistic:corridor"
+  }
+}

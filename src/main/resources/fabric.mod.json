@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "An ancient entity is corrupting your world, opening invisible doors into an ever-growing, ever-stranger Infinite Corridor.",
+  "authors": ["the-real-ltcg"],
+  "contact": {},
+  "license": "${mod_license}",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.ltcg.liminalistic.LiminalisticMod"],
+    "client": ["com.ltcg.liminalistic.client.LiminalisticClient"]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": ">=${minecraft_version}",
+    "java": ">=25"
+  }
+}
