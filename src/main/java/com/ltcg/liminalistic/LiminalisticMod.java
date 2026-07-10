@@ -1,5 +1,6 @@
 package com.ltcg.liminalistic;
 
+import com.ltcg.liminalistic.command.LiminalisticCommand;
 import com.ltcg.liminalistic.registry.ModBlocks;
 import com.ltcg.liminalistic.registry.ModDimensions;
 import com.ltcg.liminalistic.registry.ModEffects;
@@ -25,5 +26,6 @@ public class LiminalisticMod implements ModInitializer {
 		ModDimensions.init();
 		DoorManager.init();
 		PresenceManager.init();
+		LiminalisticCommand.init();
 	}
 }

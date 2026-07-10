@@ -91,6 +91,15 @@ public class CorruptionState extends SavedData {
 		refresh();
 	}
 
+	public void debugSetStage(int stage) {
+		int clamped = Math.max(0, Math.min(MAX_STAGE, stage));
+		doorsTriggered = clamped * 2;
+		roomsVisited = 0;
+		timeInCorridorTicks = 0L;
+		loreBooksFound = 0;
+		refresh();
+	}
+
 	private void refresh() {
 		cachedStage = computeStage();
 		setDirty();
