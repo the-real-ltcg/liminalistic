@@ -7,6 +7,7 @@
   "authors": ["the-real-ltcg"],
   "contact": {},
   "license": "${mod_license}",
+  "icon": "assets/liminalistic/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": ["com.ltcg.liminalistic.LiminalisticMod"],
