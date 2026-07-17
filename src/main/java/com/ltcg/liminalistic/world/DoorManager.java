@@ -10,8 +10,8 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.entity.Relative;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 
 import java.util.HashMap;
 import java.util.List;
@@ -110,7 +110,9 @@ public final class DoorManager {
 
 		BlockPos destination = cellEntryPoint(doorPos);
 		player.teleportTo(corridor, destination.getX() + 0.5, destination.getY(), destination.getZ() + 0.5,
-				Set.of(Relative.X, Relative.Y, Relative.Z), player.getYRot(), player.getXRot(), false);
+				Set.of(), player.getYRot(), player.getXRot(), false);
+		player.resetFallDistance();
+		player.setDeltaMovement(Vec3.ZERO);
 
 		corridor.sendParticles(ParticleTypes.PORTAL, destination.getX() + 0.5, destination.getY() + 1.0, destination.getZ() + 0.5, 60, 0.5, 1.0, 0.5, 0.1);
 		corridor.playSound(null, destination, SoundEvents.PORTAL_TRAVEL, SoundSource.PLAYERS, 1.0f, 0.8f);

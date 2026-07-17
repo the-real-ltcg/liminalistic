@@ -24,11 +24,18 @@ Built for **Minecraft 26.2**.
 - **Sigil Fragments** are found in rare loot chests in Distorted Structure rooms, and can be
   crafted (Sigil Fragment on top of a Stick) into a **Corruption Flower** — a decorative plant
   that drifts more black ash particles the further your world's corruption has progressed.
+- **The corridor changes how the game looks.** Iris and Sodium are bundled directly into the mod
+  — no separate install needed — along with the [HyShaders Horror](https://modrinth.com/shader/hyshaders-horror)
+  shaderpack (used with permission of its MIT license). Stepping into the Infinite Corridor
+  automatically switches your shaders to it; stepping out restores whatever you had running
+  before.
 
 ## Requirements
 
 - Minecraft 26.2, Fabric Loader `>=0.18.4`, Fabric API.
 - Java 25.
+- A GPU that supports shaders (via the bundled Iris/Sodium). If your hardware can't run shaders,
+  the corridor will just look normal — nothing else breaks.
 
 ## Downloads
 

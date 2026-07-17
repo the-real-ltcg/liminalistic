@@ -1,0 +1,7 @@
+HyShaders Horror (Lite) shaderpack
+Author: Hybred
+Source: https://modrinth.com/shader/hyshaders-horror
+License: MIT License
+
+Bundled unmodified with this mod under the terms of the MIT License, which permits
+redistribution provided the above copyright/attribution notice is retained.

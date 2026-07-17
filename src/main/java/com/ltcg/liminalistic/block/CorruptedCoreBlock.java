@@ -13,7 +13,6 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.Relative;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -21,6 +20,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.Vec3;
 
 import java.util.Set;
 
@@ -74,7 +74,9 @@ public class CorruptedCoreBlock extends Block {
 		corridor.sendParticles(ParticleTypes.REVERSE_PORTAL, corePos.getX() + 0.5, corePos.getY() + 1.0, corePos.getZ() + 0.5, 120, 1.5, 1.5, 1.5, 0.1);
 
 		player.teleportTo(overworld, returnPoint.getX() + 0.5, returnPoint.getY(), returnPoint.getZ() + 0.5,
-				Set.of(Relative.X, Relative.Y, Relative.Z), player.getYRot(), player.getXRot(), false);
+				Set.of(), player.getYRot(), player.getXRot(), false);
+		player.resetFallDistance();
+		player.setDeltaMovement(Vec3.ZERO);
 
 		player.sendSystemMessage(Component.literal("The corridor collapses behind you."));
 		overworld.playSound(null, returnPoint, SoundEvents.ENDERMAN_TELEPORT, SoundSource.PLAYERS, 1.0f, 0.5f);

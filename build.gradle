@@ -11,6 +11,13 @@ base {
 }
 
 repositories {
+	maven {
+		name = "Modrinth"
+		url = "https://api.modrinth.com/maven"
+		content {
+			includeGroup "maven.modrinth"
+		}
+	}
 }
 
 loom {
@@ -28,6 +35,13 @@ dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	// Bundled (jar-in-jar) so the mod works out of the box with no separate install.
+	// Client-only, matching Iris/Sodium's own client_side=required/server_side=unsupported.
+	clientImplementation "maven.modrinth:sodium:${project.sodium_version}"
+	include "maven.modrinth:sodium:${project.sodium_version}"
+	clientImplementation "maven.modrinth:iris:${project.iris_version}"
+	include "maven.modrinth:iris:${project.iris_version}"
 }
 
 processResources {
