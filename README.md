@@ -47,6 +47,19 @@ Most custom textures are in place; the Corruption Flower still ships with a plac
 for now. Everything else (rooms, doors, the entity, books) is built entirely from vanilla
 blocks/mobs/sounds/particles.
 
+## Credits
+
+This mod bundles the following third-party projects, unmodified. Full license texts/notices are
+included alongside them in the jar at `liminalistic_bundled/`:
+
+- **[Iris](https://modrinth.com/mod/iris)** by the IrisShaders team —
+  [LGPL-3.0-only](https://www.gnu.org/licenses/lgpl-3.0.html).
+- **[Sodium](https://modrinth.com/mod/sodium)** by the CaffeineMC team —
+  [PolyForm Shield 1.0.0](https://polyformproject.org/licenses/shield/1.0.0/).
+- **[HyShaders Horror (Lite)](https://modrinth.com/shader/hyshaders-horror)** by
+  [Hybred](https://modrinth.com/user/Hybred) — MIT License, bundled with permission of its license
+  terms.
+
 ## License
 
 MIT

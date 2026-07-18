@@ -1,7 +1,37 @@
+This mod bundles the following third-party projects, unmodified, via Fabric Loom's jar-in-jar
+mechanism (each nested jar is the genuine, unaltered file published by its own project).
+
+--------------------------------------------------------------------------------
+
+Iris Shaders
+Author: IrisShaders team
+Source: https://modrinth.com/mod/iris
+License: GNU Lesser General Public License v3.0 (LGPL-3.0-only)
+License text: https://www.gnu.org/licenses/lgpl-3.0.html
+
+Bundled unmodified under the terms of the LGPL-3.0. As required by that license: this notice
+and the license text/URL above travel with the software, and because it is bundled as a
+separate, unmodified nested jar (not merged into this mod's own code), you may substitute a
+different build of Iris simply by installing your own copy in your mods folder -- Fabric
+Loader will use that one instead.
+
+--------------------------------------------------------------------------------
+
+Sodium
+Author: CaffeineMC team
+Source: https://modrinth.com/mod/sodium
+License: PolyForm Shield License 1.0.0
+License text: https://polyformproject.org/licenses/shield/1.0.0/
+
+Bundled unmodified. Sodium's own LICENSE.md is included as-is inside its nested jar. This mod
+does not compete with Sodium or any CaffeineMC product, per the license's Noncompete clause.
+
+--------------------------------------------------------------------------------
+
 HyShaders Horror (Lite) shaderpack
 Author: Hybred
 Source: https://modrinth.com/shader/hyshaders-horror
 License: MIT License
 
-Bundled unmodified with this mod under the terms of the MIT License, which permits
-redistribution provided the above copyright/attribution notice is retained.
+Bundled unmodified under the terms of the MIT License, which permits redistribution provided
+the above copyright/attribution notice is retained.
