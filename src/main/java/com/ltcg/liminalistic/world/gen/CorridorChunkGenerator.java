@@ -24,8 +24,10 @@ import net.minecraft.world.level.chunk.ChunkGenerator;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.RandomState;
 import net.minecraft.world.level.levelgen.blending.Blender;
+import net.minecraft.world.level.levelgen.densityfunction.SamplerContext;
 
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public class CorridorChunkGenerator extends ChunkGenerator {
@@ -46,10 +48,6 @@ public class CorridorChunkGenerator extends ChunkGenerator {
 	}
 
 	@Override
-	public void buildSurface(WorldGenRegion level, StructureManager structureManager, RandomState randomState, ChunkAccess chunk) {
-	}
-
-	@Override
 	public void applyBiomeDecoration(WorldGenLevel level, ChunkAccess chunk, StructureManager structureManager) {
 		ChunkPos chunkPos = chunk.getPos();
 		RoomTheme theme = RoomTheme.forCell(chunkPos.x(), chunkPos.z(), CorruptionState.currentStage());
@@ -57,7 +55,8 @@ public class CorridorChunkGenerator extends ChunkGenerator {
 	}
 
 	@Override
-	public CompletableFuture<ChunkAccess> fillFromNoise(Blender blender, RandomState randomState, StructureManager structureManager, ChunkAccess chunk) {
+	public CompletableFuture<ChunkAccess> buildTerrain(ChunkAccess chunk, Blender blender, RandomState randomState, StructureManager structureManager,
+			BiomeManager biomeManager, WorldGenRegion region, Set<Holder<Biome>> biomes) {
 		return CompletableFuture.completedFuture(chunk);
 	}
 
@@ -72,11 +71,7 @@ public class CorridorChunkGenerator extends ChunkGenerator {
 	}
 
 	@Override
-	public void addDebugScreenInfo(List<String> result, RandomState randomState, BlockPos feetPos) {
-	}
-
-	@Override
-	public void applyCarvers(WorldGenRegion region, long seed, RandomState randomState, BiomeManager biomeManager, StructureManager structureManager, ChunkAccess chunk) {
+	public void addDebugScreenInfo(List<String> result, RandomState randomState, BlockPos feetPos, SamplerContext samplerContext) {
 	}
 
 	@Override

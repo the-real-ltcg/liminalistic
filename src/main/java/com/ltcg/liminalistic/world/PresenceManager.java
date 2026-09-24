@@ -13,7 +13,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.EntitySpawnReason;
-import net.minecraft.world.entity.monster.EnderMan;
+import net.minecraft.world.entity.monster.Enderman;
 import net.minecraft.world.level.Level;
 
 import java.util.HashMap;
@@ -145,7 +145,7 @@ public final class PresenceManager {
 		double x = player.getX() - Math.sin(angle) * distance;
 		double z = player.getZ() + Math.cos(angle) * distance;
 
-		EnderMan figure = EntityTypes.ENDERMAN.create(level, EntitySpawnReason.EVENT);
+		Enderman figure = EntityTypes.ENDERMAN.create(level, EntitySpawnReason.EVENT);
 		if (figure == null) {
 			return;
 		}
